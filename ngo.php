@@ -2,26 +2,25 @@
     include 'database.php';
     session_start();  
     if(isset($_POST['email'])) {
-      $donor_email = $_POST['email'];
+      $ngo_email = $_POST['email'];
       $password = $_POST['pass'];
 
-      $sql = "select * from donor_details where donor_email = '".$donor_email."' and password = '".$password."' limit 1";
+      $sql = "select * from ngo_details where ngo_email = '".$ngo_email."' and password = '".$password."'";
 
       $result = mysqli_query($con, $sql);
       $total = mysqli_num_rows($result);
       if($total == 1) {
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['id'] = $row['donor_id'];
-        $_SESSION['username'] = $row['donor_name'];
-        header("location:donor_Home.php");
+        $_SESSION['username'] = $row['ngo_name'];
+        header("location:ngo_dashboard.php");
       }
       else {
-        include_once 'donor_login_check.php';
+        include_once 'ngo_check.php';
       }
 
     }
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +30,7 @@
 body, html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #E7C4C4;
+  background-color: #E9D2D2;
 }
 
 * {
@@ -95,6 +94,7 @@ input[type=text]:focus, input[type=password]:focus {
     text-align: center;
     background-color: #474e5d;
     color: white;
+ }
 </style>
 </head>
 <body>
@@ -103,9 +103,9 @@ input[type=text]:focus, input[type=password]:focus {
         <br>
         <a href="index.php" style="text-align: left;text-decoration: none;padding:10px;color:white;background-color: #4caf50">Home</a>
 </div>
-<h1 style="text-align:center; font:bold; font-size:30px;color: #330000">Donor Login</h1>
+<h1 style="text-align:center; font:bold; font-size:30px;color: #330000">NGO Login</h1>
 <div class="bg-img">
-  <form method="POST"  class="container">
+  <form action="" method="POST" class="container">
     <h1>Login</h1>
     <?php
       if(isset($_SESSION["error"])){
@@ -117,15 +117,12 @@ input[type=text]:focus, input[type=password]:focus {
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="pass"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="pass" required>
-
-
-
     <button type="submit" class="btn">Login</button>
     <br>
     <br>
-    <a href="donor_signup.php" style="color: black; float: right;">Sign Up</a>
+    <a href="ngo_signup.php" style="color: black; float: right;">Sign Up</a>
   </form>
 </div>
 
@@ -133,3 +130,4 @@ input[type=text]:focus, input[type=password]:focus {
 
 </body>
 </html>
+

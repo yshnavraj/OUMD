@@ -3,9 +3,11 @@
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
-body {
-  background-color: yellow;
+.index_body {
+  background-image: url("../images/gif_back_1.gif");
+  position: relative;
 }
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -16,32 +18,33 @@ body {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
   font-size: 17px;
+}
+
+.topnav .float_right .name_ngo {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
+.topnav #admin:hover {
+  color: white;
+  text-decoration: none;
+}
 .topnav a.active {
   background-color: #4caf50;
   color: white;
 }
 .float_right {
+  display: flex;
   float: right;
-  background-color: #333;
-}
+} 
 
-/* .content1 img {
-  height: 50%;
-  width: 49%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-} */
+
 
 .container {
   margin: 20px;
@@ -65,7 +68,7 @@ body {
   opacity: 1; 
 }
 
-.container, h3, p {
+.container, h3, .p_index {
   background-color: brown;
   opacity: 0.5;
 }

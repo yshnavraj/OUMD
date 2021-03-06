@@ -8,56 +8,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>OUMD</title>
   <style>
-    .project_name {
-      color: green;
-      font-size: 60px;
-      font-weight: bolder;
-      margin: 20px;
-      background-color: aqua;
-      display: flex;
+    .img2 {
+      display:flex;
       justify-content: center;
-      border-radius: 60px;
-      box-shadow: 1px 2px 1px 1px white;
+      margin: 0 auto;
     }
   </style>
+  <title>OUMD</title>
+
 </head>
-<body class="index_body">
+<body style="background-image: url('images/gif_back_1.gif');">
 
 <div class="topnav">
 
-  <a class="active" href="#home">Home</a>
-  <a href="aboutus.php">About Us</a>
-  <a href="contact_us.php">Contact Us</a>
+  <a href="AdminH.php" class="active">Home</a>
+  <a href="AddNGO.php">Add NGO</a>
+  <a href="ViewRegisteredNGO's.php">View Registered NGO's</a>
+  <a href="View_donors.php">View Donors</a>
   <div class="float_right">
-    <a href="donor_login.php">Donor</a>
-    <a href="ngo.php">NGO</a>
-    <a href="admin_login.php">Admin</a>
+    <a href="#admin" style="background-color:#333; color: white;" id="admin">Admin</a>
+    <a href="admin_login.php">Logout</a>
   </div>
-</div>
-<div class="project_name">
-  <p>Online Unused Medicine Donation for NGOs</p>
 </div>
 <div class="container w-50 d-flex justify-content-center custom-container pt-3">
 
   <div class="section1">
-    <h3>Donate Medicine for the Unprevileged</h3>
-    <p class="p_index">'The measure of life is not its duration, but its Donation'
-    <br>
-      --Welcome to Donation Community
+    <h4><b>No one is more cherished in this world than Someone who lightens the burden of another</b></h4>
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     </p>
+	<h4><b>Dear Admin,Thank You for holding everything together !!</b></h4>
   </div> 
 </div>
 
-<div class="img1">
-  <img src="images/quote_1.jpg" width="50%" height="50%">
+<div class="img2">
+  <img src="images/anim_don.png" alt="">
 </div>
 
-<footer class="footer">
-  Copyright &copy; OUMD 2021
+<footer style="background-color: #7895f3; text-align: center;position: fixed; left:0; bottom: 0; width: 100%;">
+Copyright &copy; OUMD 2021
 </footer>
-
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
